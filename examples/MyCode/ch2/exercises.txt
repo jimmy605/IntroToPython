@@ -1,0 +1,14 @@
+2.1 - 
+2.2 - No int() around the function input()
+2.3 - 
+2.4 -
+2.5 - Done in playground.py file
+2.6 - Done in playground.py file
+2.7 - Yes they are multiples of each
+2.8 - Done in playground.py file
+2.9 - Done in playground.py file
+2.10 - Coded out
+2.11 - Coded out
+2.12 - Coded out
+2.13 - Coded out
+2.14 - Coded out

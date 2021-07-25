@@ -1,16 +1,5 @@
 import string 
 
-# x, y = 7, 3
-# total = x + y
-# print(total)
-
-# print('This is going over \
-# two lines.')
-
-# print('This is going over',
-#       'two lines')
-
-
 #2.5
 pie, r = 3.14159, 2
 diameter, circ, area = 2 * r, 2 * pie * r, pie * r ** 2
@@ -87,7 +76,17 @@ def target_hr():
     
     return f'Your maximum HR is: {max_target}BPM\nTraining range: {min_target}-{max_target}BPM'
 
-print(target_hr())
+# print(target_hr())
 
 
 #2.15
+def sort_ascending(total_nums):
+    nums = [] # Store the floats
+    
+    for n in range(total_nums):
+        n = input('Enter floating point number: ')
+        nums.append(n) # Store in nums
+    
+    return sorted(nums)
+
+print(sort_ascending(3))

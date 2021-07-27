@@ -1,0 +1,7 @@
+3.1 - Coded out.
+3.2 - Incorrect syntax. Should be similar to a, b = 7
+3.3 - Coded out.
+3.4 - Coded out.
+3.5 - Coded out.
+3.6 - Coded out. Yes it would convince me.
+ 

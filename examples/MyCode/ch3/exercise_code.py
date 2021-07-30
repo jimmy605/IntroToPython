@@ -1,5 +1,5 @@
 import statistics
-import decimal
+from decimal import Decimal
 import math 
 
 # Exercises from chapter 3
@@ -315,9 +315,119 @@ import math
 
 
 
-#3.17
-# Create (a) first then rethink
-for i in range(4):
-    counter = 1
-    for j in range(10):
-        print('*' * j)
+#3.17 - It's ugly but got the job done
+# for i in range(1):
+#     for j in range(10):
+#         print('*' * j)
+#     print()
+    
+#     for k in range(10, 0, -1):
+#         print('*' * k)
+#     print()
+    
+#     num_spaces = 0
+#     for l in range(10, 0, -1):
+#         star = '*'
+#         space = ' '
+#         print(f'{space * num_spaces}{star * l}')
+#         num_spaces += 1
+    
+#     print()
+#     num_spaces = 9
+#     for l in range(1, 11):
+#         star = '*'
+#         space = ' '
+#         print(f'{space * num_spaces}{star * l}')
+#         num_spaces -= 1
+
+
+
+
+#3.18 - Code looks uglier than the last (3.17) but was a hard one for me to code out. Needs rethinks or at the minimum refactoring.
+# # Variables
+# a_d_asterisks = 1
+# a_d_spacers = 9
+
+# b_c_asterisks = 10
+# b_c_spacers = 0
+
+# space = ' '
+# print_spacer = '   ' # Spacer between a, b, c, and d
+# a = b = c = d = '*'  # Assign each print a, b, c, and d
+
+# # One main for loop that iterates 10 times
+# for i in range(1, 11):
+#     print(f'{a * a_d_asterisks}{space * a_d_spacers}{print_spacer}', end='')
+#     print(f'{b * b_c_asterisks}{space * b_c_spacers}{print_spacer}',end='')
+#     print(f'{space * b_c_spacers}{c * b_c_asterisks}{print_spacer}', end='')
+#     print(f'{space * a_d_spacers}{d * a_d_asterisks}{print_spacer}')
+    
+#     # Increment or decrement a counter for each print (a, b, c, and d)
+#     a_d_asterisks += 1
+#     a_d_spacers -= 1
+
+#     b_c_asterisks -= 1
+#     b_c_spacers += 1
+
+
+
+
+#3.19
+# side1 = 1
+# side2 = 1
+
+# # First loop - hypotenuse
+# for h in range(1, 21):
+#     if (side1 ** 2 + side2 ** 2) == (h ** 2):
+#         print([side1, side2, h])
+        
+#     # Second loop - side2
+#     for side2 in range(1, 21):
+#         if (side1 ** 2 + side2 ** 2) == (h ** 2):
+#             print([side1, side2, h])
+        
+#         # Third loop - side1
+#         for side1 in range(1, 21):
+#             if (side1 ** 2 + side2 ** 2) == (h ** 2):
+#                 print([side1, side2, h])
+
+
+
+
+#3.20
+# def binary_to_decimal(binary_num):
+#     """Returns a binary num input to decimal output."""
+#     total_sum = 0
+#     binary_decimal = [2 ** i for i in range(8, -1, -1)]
+    
+#     for idx, digit in enumerate(str(binary_num)):
+#         if int(digit) == 1:
+#             total_sum += binary_decimal[idx]
+    
+#     return total_sum
+
+# print(binary_to_decimal(111111111))
+
+
+#3.21 - I couldn't solve it using float valueseven after 3hrs. Pennies kept going to 2 instead of 3. Even using round(change) which = 0.03 kept on returning 2 for total_coins = change // coin_to_return[coin]. In the end I had to use digit/int() values to get it to work. 
+def change_of_coins():
+    # Input purchase price of a dollar or less and deduct one dollar
+    change = int(100 - (float(input('Enter the purchase price of the item: ')) * 100))
+    
+    # Coin values
+    coin_to_return = {'penny': 1, 'nickel': 5, 'dime': 10, 'quarter': 25}
+    
+    # Print the header
+    print('Your change is: ')
+    
+    # Iterate through each coin
+    for coin in ['quarter', 'dime', 'nickel', 'penny']:
+        # check if change >= a coin value
+        if change >= coin_to_return[coin]:
+            # Check to see how many times that coin can be divided by
+            total_coins = change // coin_to_return[coin]
+            # Deduct the change by the total number of coins above
+            change -= total_coins * coin_to_return[coin]
+            print(f'{total_coins} {coin}s')
+
+change_of_coins()

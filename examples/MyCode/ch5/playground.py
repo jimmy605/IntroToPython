@@ -1,56 +1,24 @@
-def cube_list():
-    lyst = [num ** 3 for num in range(1, 11)]
-    return lyst
+import matplotlib.pyplot as plt
+import numpy as np 
+import random 
+import seaborn as sns 
 
-print(cube_list())
+rolls = [random.randrange(1, 7) for i in range(6_000_000)]
+values, frequencies = np.unique(rolls, return_counts=True)
 
+title = f'rolling a Six-Sided Die {len(rolls):,} Times'
+sns.set_style('whitegrid')
+axes = sns.barplot(x=values, y=frequencies, palette='bright')
 
+axes.set_title(title)
+axes.set(xlabel='Die Value', ylabel='Frequency')
+axes.set_ylim(top=max(frequencies) * 1.10)
 
+for bar, frequency in zip(axes.patches, frequencies):
+    text_x = bar.get_x() + bar.get_width() / 2.0
+    text_y = bar.get_height()
+    text = f'{frequency:,}\n{frequency / len(rolls):.3%}'
+    axes.text(text_x, text_y, text,
+              fontsize=11, ha='center', va='bottom')
 
-characters = []
-characters += 'Birthday'
-print(characters)
-
-
-
-
-num = (123.45,)
-print(num)
-
-
-
-
-high_low = ('Monday', 35, 21)
-for element in high_low:
-    print(element)
-
-
-
-
-names = ['Dean', 'Connor', 'Noah', 'Stacey']
-for idx, name in enumerate(names):
-    print(f'{idx + 1}: {name}')
-
-
-
-
-numbers = [2, 3, 5, 7, 11, 13, 17, 19]
-numbers[0:3] = ['two', 'three', 'five']
-print(numbers)
-numbers[0:3] = []
-print(numbers)
-
-
-
-
-numbers = [num for num in range(1, 16)]
-print(numbers[1::2])
-
-numbers[5:10] = [0, 0, 0, 0, 0]
-print(numbers)
-
-numbers = numbers[0:5]
-print(numbers)
-
-numbers = []
-print(numbers)
+plt.show()

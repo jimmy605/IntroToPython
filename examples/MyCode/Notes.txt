@@ -1,0 +1,1 @@
+To create the best solutions, you should follow a detailed analysis process for deter- mining your project’s requirements (i.e., defining what the system is supposed to do), then develop a design that satisfies them (i.e., specifying how the system should do it).

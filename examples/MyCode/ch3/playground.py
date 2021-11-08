@@ -1,78 +1,81 @@
 from decimal import Decimal
 import statistics
 
-# Concise conditional expression
-grade = 69
-result = 'Passed' if grade >= 70 else 'Failed\nYou must take this course again'
-# print(result)
+# """
+# Determine the first power of 7 greater than 1000.
+# """
+# product = 7
+
+# while product < 1000:
+#     product *= 7
+
+# print(product)
 
 
-product = 7
-
-while product <= 1_000:
-    product *= 7
-print(product)
+# for character in 'Programming':
+#     print(character, end='  ')
+# print()
 
 
-for char in 'Programming':
-    print(char, end='  ')
-print()
+# print(10, 20, 30, sep=', ')
 
 
-# Printing numbers and seperating the values
-print(10, 20, 30, sep='.....')
+# total = 0
+# for num in range(1_000_001):
+#     total += num
+
+# print(f'{total:,}')
 
 
-# Adding up numbers from a list and printing the total
-total = 0
-
-for num in [2, -3, 0, 17, 9]:
-    total += num
-print(total)
-
-
-for counter in range(10):
-    print(counter, end=' ')
-print()
-
-
-# Calc the total of 0 - 1_000_000
-total_two = 0
-
-for num in range(1_000_001):
-    total_two += num 
-print(total_two)
-
-
-x = 12
-x **= 2
-print(x)
 
 
 # for num in range(2):
-#     check_num = int(input('Enter a number to check if its odd or even: '))
+#     number = int(input('Enter a number: '))
     
-#     if check_num % 2 == 0:
-#         print(f'{check_num} is even')
+#     if number % 2 == 0:
+#         print(f'{number} is even')
 #     else:
-#         print(f'{check_num} is odd')
+#         print(f'{number} is odd')
 
 
-total = 0
-for num in range(2, 101, 2):
-    total += num 
-print(total)
 
 
-principal = Decimal('1000.00')
-rate = Decimal('0.05')
+# for num in range(99, -1, -11):
+#     print(num, end=' ')
 
 
-print(f'Your bill is ${Decimal(37.45) * Decimal(1.0625):.2f}')
+
+# principal = Decimal('1000.00')
+# print(principal)
+
+# rate = Decimal('0.05')
+# print(rate)
+
+# x = Decimal('10.5')
+# y = Decimal('2')
+
+# print(x + y)
+
+
+# for year in range(1, 11):
+#     a = principal * ( 1 + rate) ** year
+#     print(f'{year:>2}: {a:>10.2f}')
+
+
+# bill_rate = Decimal('0.0625')
+# amount = Decimal('37.45')
+# print(f'{amount * (1 + bill_rate):.2f}')
 
 
 grades = [85, 93, 45, 89, 85]
-print(statistics.mean(grades), statistics.median(grades), statistics.mode(grades))
+# mean_val = sum(grades) / len(grades)
+# print(mean_val)
 
-nums = [47, 95, 88, 73, 88, 84]
-print(statistics.mean(nums), statistics.median(nums), statistics.mode(nums))
+
+print(statistics.mean(grades))
+
+values = [47, 95, 88, 73, 88, 84]
+
+print('Mean:', statistics.mean(values))
+print('Mode:', statistics.mode(values))
+print('Median:', statistics.median(values))

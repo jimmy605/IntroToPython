@@ -1,3 +1,8 @@
+import matplotlib.pyplot as plt 
+import numpy as np 
+import random 
+import seaborn as sns 
+
 # a_list = [] 
 
 # for number in range(1, 6):
@@ -322,4 +327,66 @@
 # print(max(colors, key=lambda s: s.lower()))
 
 
+# numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+# reversed_numbers = [item for item in reversed(numbers)]
+# print(reversed_numbers)
 
+
+# names = ['Bob', 'Sue', 'Amanda']
+# grade_point_averages = [3.5, 4.0, 3.75]
+
+# for name, gpa in zip(names, grade_point_averages):
+#     print(f'Name: {name} - GPA: {gpa}')
+
+
+
+# foods = ['Cookies', 'pizza', 'Grapes', 'apples', 'steak', 'Bacon']
+# print(min(foods, key=lambda s: s.lower()))
+# print(min(foods))
+
+
+
+
+# print([(a + b) for a, b in zip([10,20,30], [1,2,3])])
+
+
+# a = [[77, 68, 86, 73], [96, 87, 89, 81], [70, 90, 86, 81]]
+
+# for row in a:
+#     for item in row:
+#         print(item, end=' ')
+#     print()
+
+
+# for i, row in enumerate(a):
+#     for j, item in enumerate(row):
+#         print(f'a[{i}][{j}]={item}', end=' ')
+#     print()
+
+
+# t = [[0,10,2], [0,1,2]]
+# # [[0, 1, 2], [1, 2, 3]]
+
+# for row in range(len(t)):
+#     for column in range(len(t[row])):
+#         t[row][column] = row + column
+
+# print(t)
+
+
+
+t = [[10, 7, 3], [20, 4, 17]]
+total = 0
+count = 0
+
+for row in t:
+    for column in row:
+        total += column
+        count += 1
+
+print(f'{total/count:.1f}')
+
+
+for row in t:
+    count = len(row)
+    total = sum(row)

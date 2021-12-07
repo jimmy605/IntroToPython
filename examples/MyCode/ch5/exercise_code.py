@@ -421,17 +421,32 @@ import random
 # enqueue - Join the queue
 # dequeue - Get out of the line
 
-lyst = [3,2,1]
+# lyst = [3,2,1]
 
-def queue_list(nums):
-    output = []
+# def queue_list(nums):
+#     output = []
     
-    for num in lyst[:]:
-        output.append(num)
-        print(num, end=' ... ')
+#     for num in lyst[:]:
+#         output.append(num)
+#         print(num)
     
-    for num in output:
-        dequeue = output.pop(0)
-        print(dequeue, end=' ... ')
+#     for num in output:
+#         print(output.pop(0))
 
-queue_list(lyst)
+# queue_list(lyst)
+
+
+
+
+
+# 5.23 - Order of filter an map calls
+# numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+
+# test = list(filter(lambda x: x % 2 == 0, map(lambda x: x * 2, numbers)))
+# print(test)
+
+
+
+
+
+# 5.24 - 5.26 completed in other files

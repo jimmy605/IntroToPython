@@ -4,6 +4,9 @@ from collections import deque
 from decimal import Decimal
 import operator
 import random 
+import numpy as np 
+import statistics
+
 
 # 5.3 - Fill in the missing code
 # lyst = [(x, x * 0.0254) for x in [69, 77, 54]]
@@ -450,3 +453,64 @@ import random
 
 
 # 5.24 - 5.26 completed in other files
+
+
+# 5.27 - Duplicate elimination and counting frequencies
+# random_values = np.array([random.randrange(1, 10) for i in range(50)])
+# number, freq = np.unique(random_values, return_counts=True)
+
+# # Print the header 
+# print(f'Number    Count')
+# for i in range(len(number)):
+#     print(f'{number[i]:>3}{freq[i]:>10}')
+
+
+
+
+# 5.28 - Survey response statistics
+# survey = [1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 5]
+
+# def data_processing(ratings):
+#     """Take in a list of ratings and display the following response statistics: minimum, maximum, range, mean, median, mode, vari- ance and standard deviation"""
+    
+#     minimum, maximum = min(ratings), max(ratings)
+#     num_range = maximum - minimum
+#     mean = statistics.mean(ratings)
+#     median = statistics.median(ratings)
+#     mode = statistics.mode(ratings)
+#     variance = statistics.variance(ratings)
+#     standard_dev = statistics.stdev(ratings)
+    
+#     data = [minimum, maximum, num_range, mean, median, mode, variance, standard_dev]
+#     stats = ['minimum', 'maximum', 'range', 'mean', 'median', 'mode', 'variance', 'standard deviation']
+    
+#     for i in range(len(stats)):
+#         print(f'{stats[i]}: {round(data[i],3)}')
+
+
+# data_processing(survey)
+
+
+
+
+# 5.29 - survey_stats.py 
+
+
+
+
+# 5.30 - Didn't complete
+
+
+
+
+# 5.31 - coin_toss.py 
+
+
+
+
+# 5.32 - two_die_roll.py 
+
+
+
+
+# 5.33 - Didn't complete

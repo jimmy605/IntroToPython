@@ -410,7 +410,7 @@ def binary_to_decimal(binary_num):
 print(binary_to_decimal(111111111))
 
 
-#3.21 - I couldn't solve it using float valueseven after 3hrs. Pennies kept going to 2 instead of 3. Even using round(change) which = 0.03 kept on returning 2 for total_coins = change // coin_to_return[coin]. In the end I had to use digit/int() values to get it to work. 
+#3.21 - I couldn't solve it using float values even after 3hrs. Pennies kept going to 2 instead of 3. Even using round(change) which = 0.03 kept on returning 2 for total_coins = change // coin_to_return[coin]. In the end I had to use digit/int() values to get it to work. 
 def change_of_coins():
     # Input purchase price of a dollar or less and deduct one dollar
     change = int(100 - (float(input('Enter the purchase price of the item: ')) * 100))

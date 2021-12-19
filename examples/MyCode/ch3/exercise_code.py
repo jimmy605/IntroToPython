@@ -1,4 +1,7 @@
 import math 
+import decimal
+import statistics
+
 # Exercises
 
 # 3.1 - Completed
@@ -236,20 +239,105 @@ import math
 
 
 #3.20 - binary to decimal conversion
-def binary_to_decimal(binary_num):
-    """Returns a binary num input to decimal input."""
-    total_sum = []
-    binary_decimal = [2 ** i for i in range(0,9)]
+# def binary_to_decimal(binary_num):
+#     """Returns a binary num input to decimal input."""
+#     total_sum = []
+#     binary_decimal = [2 ** i for i in range(0,9)]
     
-    # Reverse the binary_num
-    reverse_binary_num = []
-    for i in binary_num:
-        reverse_binary_num.insert(0, i)
+#     # Reverse the binary_num
+#     reverse_binary_num = []
+#     for i in binary_num:
+#         reverse_binary_num.insert(0, i)
     
-    for idx, digit in enumerate(reverse_binary_num):
-        if int(digit) == 1:
-            total_sum.append(binary_decimal[idx])
+#     for idx, digit in enumerate(reverse_binary_num):
+#         if int(digit) == 1:
+#             total_sum.append(binary_decimal[idx])
     
-    return sum(total_sum)
+#     return sum(total_sum)
 
-print(binary_to_decimal('11111110'))
+# print(binary_to_decimal('11111110'))
+
+
+
+
+#3.21 - Calculate change using fewest number of coins
+# def fewest_coins():
+#     price = int(100 - (float(input('Input the purchase price: ')) * 100))
+    
+#     # Coin values
+#     coins = {
+#         'quarter': 25,
+#         'dime': 10,
+#         'nickel': 5,
+#         'penny': 1
+#     }
+    
+#     # Print the header
+#     print('Your change is: ')
+    
+#     # Iterate through each coin
+#     for coin in coins.keys():
+#         # Check if change >= the coin value
+#         if price >= coins[coin]:
+            
+#             # check to see how many times that coin can be divided by
+#             total_coins = price // coins[coin]
+            
+#             # Deduct the change by the number of coins above
+#             price -= total_coins * coins[coin]
+#             print(f'{total_coins} {coin}s')
+
+# fewest_coins()
+
+
+
+
+#3.22 - Optional else clause of a loop
+# for i in range(2):
+#     value = int(input('Enter an integer (-1 to break): '))
+#     print('You entered:', value)
+    
+#     if value == -1:
+#         break
+# else:
+#     print('The loop terminated without executing the break')
+
+
+
+#3.27 - World population growth
+# def population():
+#     # current_pop
+#     current_population = 7_900_000_000
+#     # yearly_growth
+#     growth_rate = 1.05 
+    
+#     # Print a header for the data
+#     print(f'Year    New Population Total    Growth Increase')
+    
+#     for year in range(101):
+#         new_population = current_population * growth_rate
+#         growth_increase = new_population - current_population
+#         current_population = new_population
+        
+#         print(f'{year:>3}{new_population:>20,.0f}{growth_increase:>22,.0f}')
+
+# population()
+
+
+
+#3.28 - Mean, median and mode
+# def data(lyst):
+#     mean = statistics.mean(lyst)
+#     median = statistics.median(lyst)
+#     mode = statistics.mode(lyst)
+    
+#     return [mean, median, mode] 
+
+# numbers = [9,11,22,34,17,22,34,22,40]
+# print(data(numbers))
+
+
+
+
+#3.29 - Problem with the median
+# They need to be summed together and divided by 2 to get the average

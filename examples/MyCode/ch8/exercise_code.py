@@ -1,6 +1,7 @@
 from itertools import combinations
 import random 
 import operator
+import re 
 
 # 8.1  - Check protection
 # def check_protection(amount):
@@ -181,3 +182,122 @@ import operator
 
 
 # 8.12 - Project: Scrambled text
+# def scrambe_text():
+#     # Enter the word to be scrambled
+#     word = input('Enter the word to be scrambled: ')
+    
+#     # Variables for the first and last characters
+#     first, last = word[0], word[-1]
+    
+#     # Variable for the characters to be scrambled and scramble them
+#     middle = random.shuffle(list(word[1:-1]))
+    
+#     # Return the first, scrambled and last character as a string
+#     return f'{first}{middle}{last}'
+
+# print(scrambe_text())
+
+
+
+
+# 8.13 - Condense spaces to a single space
+# def condense_spaces():
+#     # Enter the word to be condensed
+#     sentence = input('Enter the sentence to be condensed: ')
+    
+#     # Return the condensed string
+#     return ' '.join(re.split(r'\s+', sentence))
+
+# print(condense_spaces())
+
+
+
+
+# 8.14 - Capturing substrings
+# def capture_substrings(sentence):
+#     for word in re.split(r'\s+', sentence):
+#         result = re.search(r'[b][a-z]*', word)
+#         if result:
+#             print(result.group())
+
+# sentence = 'bet this doesnt work for b but instead for char bet you'
+# capture_substrings(sentence)
+
+
+# def capture_substrings_2(sentence):
+#     for word in re.split(r'\s+', sentence):
+#         result = re.search(r'ed$', word)
+#         if result:
+#             print(word)
+
+
+# sentence_2 = 'bet this deed doesnt work. It need to but bet haved'
+# capture_substrings_2(sentence_2)
+
+
+
+
+# 8.15 - Counting characters and words
+# def counting(string):
+#     digits = len(re.findall(r'\d', string))
+#     non_digits = len(re.findall(r'[^0-9\s]', string))
+#     spaces = len(re.findall('\s', string))
+#     words = len(re.findall('[\W]', string))
+    
+#     return digits, non_digits, spaces, words
+
+# print(counting('69 isst'))
+
+
+
+
+# 8.16 - Locating URL's
+# url1 = 'http://www.ednoftheworld.com.au'
+
+# def confirm_url(url):
+#     protocol = True if re.match(r'http://www.', url) else False 
+#     organisation = True if re.match(r'[a-z]{2}', url) else False 
+#     print(protocol, organisation)
+
+# confirm_url(url1)
+
+
+
+
+# 8.17 - Matching numeric values
+# def match_numeric_values():
+    # num can have any number of digits
+    # only digits and a decimal point (optional)
+    # if the decimal appears there can only be one and must have a digit either side of it
+    # there should be whitespace or a beginning or end of line character on either side of a valid number
+########## TOO HARD BASEKT FOR THIS ONE ################
+
+
+
+
+# 8.18 - Password format validator
+# def password_validator1(string):
+#     return 'Valid password' if re.fullmatch(r'\w+[.,_]{1}\w+[.,_]{1}\w+[.,_]{1}', string) else 'Not a valid password'
+
+# print(password_validator1('Dean_is,the.'))
+
+
+# def password_validator2(string):
+#     return 'Valid password' if re.fullmatch(r'[A-Z+a-z+0-9+!@#$%<^>&*?]{8,}', string) else 'Not a valid password'
+
+
+# print(password_validator2('Dean_9?is,the.'))
+
+
+
+
+# 8.19 - Done
+
+
+
+
+# 8.20 - Munging dates - Not doing it
+
+
+
+#  8.21 - Metric conversions
